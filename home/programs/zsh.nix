@@ -1,0 +1,1 @@
+    enableCompletion = true;

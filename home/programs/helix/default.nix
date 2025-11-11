@@ -12,7 +12,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "catppuccin_macchiato_transparent";
+      theme = "solarized_dark_transparent";
       editor = {
         line-number = "relative";
 
@@ -41,13 +41,21 @@
         formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
       }
       {
+        name = "html";
+        auto-format = true;
+      }
+      {
         name = "rust";
+        auto-format = true;
+      }
+      {
+        name = "zig";
         auto-format = true;
       }
     ];
     themes = {
-      catppuccin_macchiato_transparent = {
-        "inherits" = "catppuccin_macchiato";
+      solarized_dark_transparent = {
+        "inherits" = "solarized_dark";
         "ui.background" = { };
       };
     };
